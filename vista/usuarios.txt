@@ -1,0 +1,3 @@
+Juan;1234;usuario
+Pepe;4567;administrador
+Ana;7894;administrador
