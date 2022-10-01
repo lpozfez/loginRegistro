@@ -4,13 +4,17 @@
     $pass=$_POST['pass'];
     $rol=$_POST['rol'];
     $ficheroDatos=file_get_contents('usuarios.txt');
-
-    $nuevoUsu= $nombre.";".$pass.";".$rol;
-    $ficheroDatos=$ficheroDatos.'\n'.$nuevoUsu;
+    //Creamos la String del nuevo usuario
+    $nuevoUsu= "\n".$nombre.";".$pass.";".$rol;
+    //Concatenamos el usuario nuevo al String del fichero de datos
+    $ficheroDatos=$ficheroDatos.$nuevoUsu;
+    //Añadimos el String completo al fichero
+    $escrito=file_put_contents('usuarios.txt',$ficheroDatos);
     
-    file_put_contents('usuarios.txt',$ficheroDatos);
-
-    echo 'usuarios.txt';
-    
+    if ($escrito!=false){
+        echo 'fichero escrito';
+    }else{
+        echo 'error';
+    }
   
 ?>
