@@ -1,15 +1,15 @@
 <?php
-
-    $ficheroDatos=file_get_contents('usuarios.txt');//recogemos el fichero en forma de string
     $usuario=$_POST['usuario'];
     $pass=$_POST['pass'];
 
     $rolMindundi='usuario';
     $admin='administrador';
+    
+    $ficheroDatos=file_get_contents('usuarios.txt');//recogemos el fichero en forma de string
     $user= explode("\n",$ficheroDatos);//array con cada línea del string
     $encontrado=false;
     $i=0;
-    //Traemos los datos
+    //Funcion que Traemos los datos
     while($encontrado==false && $i<count($user)){//Esto a fichero de datos
         //Por cada fila separamos los datos y los añadimos al array de ususarios $user
         $usu=trim(explode(";",$user[$i])[0]);

@@ -3,3 +3,9 @@ Pepe;4567;administrador
 Ana;7894;administrador
 Maria;1234;usuario
 Lorena;1234;administrador
+Pedro;1234;administrador
+Irene;1234;usuario
+IreneA;7532;usuario
+Luis;1234;usuario
+Jorge;7896;usuario
+Pedro1;7415;usuario

@@ -12,7 +12,7 @@
     $escrito=file_put_contents('usuarios.txt',$ficheroDatos);
     
     if ($escrito!=false){
-        echo 'fichero escrito';
+        header("Location: procesaListado.php");
     }else{
         echo 'error';
     }
