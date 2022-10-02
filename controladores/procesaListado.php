@@ -1,5 +1,5 @@
 <?php
-    $ficheroDatos=file_get_contents('usuarios.txt');
+    $ficheroDatos=file_get_contents('../modelo/usuarios.txt');
     $user= explode("\n",$ficheroDatos);
     $i=0;
     

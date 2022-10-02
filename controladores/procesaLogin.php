@@ -1,11 +1,12 @@
 <?php
+
     $usuario=$_POST['usuario'];
     $pass=$_POST['pass'];
 
     $rolMindundi='usuario';
     $admin='administrador';
     
-    $ficheroDatos=file_get_contents('usuarios.txt');//recogemos el fichero en forma de string
+    $ficheroDatos=file_get_contents('../modelo/usuarios.txt');//recogemos el fichero en forma de string
     $user= explode("\n",$ficheroDatos);//array con cada línea del string
     $encontrado=false;
     $i=0;
@@ -27,7 +28,7 @@
 
    if($encontrado==true){
         if($rol==$admin){
-            header("Location: registroUsu.html");
+            header("Location: ../vista/registroUsu.html");
         }else{
             echo 'Bienvenido '.$usu;
             echo '<br>';
